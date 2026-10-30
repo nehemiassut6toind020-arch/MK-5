@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK-5 | Mapas de Karnaugh</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="volver-portada">← Volver a la portada</a>
+        <h1>MK-5</h1>
+        <p>Simplificador de funciones booleanas</p>
+        <span>Matemática Discreta · Hasta 5 variables</span>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>1. Definir la función</h2>
+
+            <label for="variables">Número de variables</label>
+            <select id="variables">
+                <option value="2">2 variables</option>
+                <option value="3">3 variables</option>
+                <option value="4">4 variables</option>
+                <option value="5" selected>5 variables</option>
+            </select>
+
+            <label for="minterms">
+                Minterms (números separados por comas)
+            </label>
+            <input
+                id="minterms"
+                type="text"
+                placeholder="Ejemplo: 1,3,5,7,9,11,13,15"
+            >
+
+            <p class="help">
+                Los minterms representan las combinaciones donde F = 1.
+            </p>
+
+            <button id="generar">Generar mapa</button>
+            <p id="mensaje" role="status"></p>
+        </section>
+
+        <section class="panel">
+            <h2>2. Mapa de Karnaugh</h2>
+            <div id="mapas" class="mapas"></div>
+        </section>
+
+        <section class="panel">
+            <h2>3. Simplificación booleana</h2>
+            <div id="resultado">
+                Ingresa los minterms para comenzar.
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>4. Circuito lógico</h2>
+            <div id="circuito">
+                Genera un mapa para visualizar el circuito lógico.
+            </div>
+        </section>
+
+        <section class="panel acciones">
+            <button id="imprimir" type="button">
+                Imprimir / Guardar PDF
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        MK-5 · Proyecto universitario de Matemática Discreta
+    </footer>
+</body>
+</html>
